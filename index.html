@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Naprawa Komputerów | Serwis Krynka</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --secondary: #1e293b;
+      --bg: #f1f5f9;
+      --text: #0f172a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    nav {
+      background: white;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--secondary);
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      animation: fadeIn 1s ease-in;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .card {
+      background: white;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, textarea {
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+
+    button {
+      background: var(--primary);
+      color: white;
+      padding: 1rem;
+      border: none;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    footer {
+      background: var(--secondary);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 2rem;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      } to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      } to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Serwis Komputerowy Krynka</h1>
+  <p>Szybka i profesjonalna naprawa sprzętu komputerowego w Twojej okolicy</p>
+</header>
+
+<nav>
+  <a href="#oferta">Oferta</a>
+  <a href="#cennik">Cennik</a>
+  <a href="#kontakt">Kontakt</a>
+</nav>
+
+<section id="oferta">
+  <h2>Co oferuję?</h2>
+  <div class="card">
+    <ul>
+      <li>Naprawa komputerów stacjonarnych</li>
+      <li>Instalacja i konfiguracja systemu Windows</li>
+      <li>Wymiana i montaż podzespołów</li>
+      <li>Diagnoza i czyszczenie systemu</li>
+      <li>Odzyskiwanie danych (jeśli możliwe)</li>
+      <li>Doradztwo techniczne i składanie zestawów</li>
+    </ul>
+  </div>
+</section>
+
+<section id="cennik">
+  <h2>Cennik usług</h2>
+  <div class="card">
+    <ul>
+      <li>Instalacja systemu: 70 zł</li>
+      <li>Czyszczenie systemu / optymalizacja: 50 zł</li>
+      <li>Diagnoza problemu: 30 zł (odejmowane od kosztu naprawy)</li>
+      <li>Wymiana podzespołów: od 30 zł</li>
+      <li>Odzyskiwanie danych: od 80 zł</li>
+      <li>Dojazd na terenie Krynka: do dogadania</li>
+    </ul>
+  </div>
+</section>
+
+<section id="kontakt">
+  <h2>Formularz zgłoszenia</h2>
+  <div class="card">
+    <form action="https://formspree.io/f/YOUR_ID" method="POST">
+      <input type="text" name="name" placeholder="Imię i nazwisko" required>
+      <input type="email" name="email" placeholder="Adres e-mail" required>
+      <textarea name="message" rows="6" placeholder="Opisz problem lub usługę, którą potrzebujesz" required></textarea>
+      <button type="submit">Wyślij zgłoszenie</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Serwis Komputerowy Krynka | Twoje wsparcie IT w zasięgu ręki
+</footer>
+
+</body>
+</html>
