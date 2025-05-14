@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Naprawa Komputerów | Serwis Krynka</title>
+  <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -126,12 +127,30 @@
       background: #1d4ed8;
     }
 
+    .call-btn {
+      margin-top: 1rem;
+      display: inline-block;
+      background: #22c55e;
+      color: white;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+    }
+
     footer {
       background: var(--secondary);
       color: white;
       text-align: center;
       padding: 2rem 1rem;
       margin-top: 2rem;
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: #cbd5e1;
+      text-decoration: underline;
     }
 
     @keyframes fadeInDown {
@@ -156,7 +175,7 @@
 <body>
 
 <header>
-  <h1>Serwis Komputerowy Krynka</h1>
+  <h1>💻 Serwis Komputerowy Krynka</h1>
   <p>Szybka i profesjonalna naprawa sprzętu komputerowego w Twojej okolicy</p>
 </header>
 
@@ -177,6 +196,7 @@
       <li>Diagnoza i czyszczenie systemu</li>
       <li>Odzyskiwanie danych (jeśli możliwe)</li>
       <li>Doradztwo techniczne i składanie zestawów</li>
+      <li>Inne usługi: Prosimy użyć formularza</li>
     </ul>
   </div>
 </section>
@@ -188,9 +208,9 @@
       <li>Instalacja systemu: 70 zł</li>
       <li>Czyszczenie systemu / optymalizacja: 50 zł</li>
       <li>Diagnoza problemu: 30 zł (odejmowane od kosztu naprawy)</li>
-      <li>Wymiana podzespołów: od 30 zł</li>
+      <li>Wymiana podzespołów: od 40-80 zł (plus koszt części)</li>
       <li>Odzyskiwanie danych: od 80 zł</li>
-      <li>Dojazd na terenie Krynka: do dogadania</li>
+      <li>Usuwanie wirusów/malware: 100zł</li>
     </ul>
   </div>
 </section>
@@ -201,7 +221,17 @@
     <form action="https://formspree.io/f/xqaqwpwe" method="POST">
       <input type="text" name="name" placeholder="Imię i nazwisko" required>
       <input type="email" name="email" placeholder="Adres e-mail" required>
+      <input type="tel" name="phone" placeholder="Numer telefonu (opcjonalnie)">
+      <p style="font-size: 0.9rem; color: rgb(255, 0, 0); margin-bottom: 1rem;">
+        Podaj numer telefonu, jeśli chcesz otrzymać SMS lub telefon zwrotny. W przeciwnym razie odpowiem e-mailem.
+      </p>
       <textarea name="message" rows="6" placeholder="Opisz problem lub usługę, którą potrzebujesz" required></textarea>
+      <p style="font-size: 0.9rem; color: gray;">
+        Jeśli masz pytania o inne usługi, napisz szczegóły. Dokonam wyceny na podstawie opisu.
+      </p>
+      <p style="font-size: 0.8rem; color: gray;">
+        Korzystając z formularza, akceptujesz naszą <a href="polityka.html">politykę prywatności</a>.
+      </p>
       <button type="submit">Wyślij zgłoszenie</button>
     </form>
   </div>
@@ -211,20 +241,19 @@
   <h2>O nas</h2>
   <div class="card">
     <p>
-      Jesteśmy lokalnym serwisem komputerowym działającym na terenie Krynki i okolic. Oferujemy szybkie, uczciwe i niedrogie naprawy komputerów stacjonarnych i laptopów. Naszym celem jest pomoc osobom, które cenią sobie bezproblemowe działanie sprzętu IT bez zbędnego marketingowego bełkotu.
+      Jesteśmy lokalnym serwisem komputerowym działającym na terenie Krynka i okolic. Oferujemy szybkie, uczciwe i niedrogie naprawy komputerów stacjonarnych i laptopów.
     </p>
-    <p>
-      Działamy z pasją i doświadczeniem – na rynku od ponad X lat, setki zadowolonych klientów, realne podejście do problemów i pełna transparentność kosztów. Jeżeli Twój komputer działa wolno, przegrzewa się lub coś „dziwnego” się z nim dzieje – pomożemy.
-    </p>
+    <p>Z komputerami mam do czynienia na co dzień  od sprzętu, przez systemy operacyjne, aż po oprogramowanie.</p>
     <p style="font-size: 0.9rem; margin-top: 1rem; color: gray;">
       <strong>Informacja prawna:</strong><br>
-      Nazwa „Serwis Krynka” odnosi się wyłącznie do lokalizacji naszej działalności w miejscowości Krynka. Nie jesteśmy powiązani z żadnym podmiotem gospodarczym posługującym się nazwą „Krynka” w innej branży, w szczególności z producentem wód mineralnych o tej samej nazwie.
+      Nazwa „Serwis Krynka” odnosi się wyłącznie do lokalizacji naszej działalności. Nie jesteśmy powiązani z żadnym innym podmiotem używającym tej nazwy, np. producentem wód mineralnych.
     </p>
   </div>
 </section>
 
 <footer>
-  &copy; 2025 Serwis Komputerowy Krynka | Twoje wsparcie IT w zasięgu ręki
+  &copy; 2025 Serwis Komputerowy Krynka | Twoje wsparcie IT w zasięgu ręki<br>
+  Telefon: +48 660 922 139 | E-mail: ignacy.celinskij@gmail.com
 </footer>
 
 </body>
