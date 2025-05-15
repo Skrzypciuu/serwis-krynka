@@ -6,237 +6,196 @@
   <title>Naprawa Komputerów | Serwis Krynka</title>
   <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --primary: #2563eb;
-    --secondary: #1e293b;
-    --bg: #f1f5f9;
-    --text: #0f172a;
-  }
-
-  [data-theme="dark"] {
-    --primary: #3b82f6;
-    --secondary: #cbd5e1;
-    --bg: #0f172a;
-    --text: #f1f5f9;
-  }
-
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  html {
-    transition: background-color 0.3s, color 0.3s;
-  }
-
-  body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    transition: background-color 0.3s, color 0.3s;
-  }
-
-  header {
-    background: var(--primary);
-    color: white;
-    padding: 2rem 1rem;
-    text-align: center;
-    animation: fadeInDown 1s ease-in-out;
-  }
-
-  header h1 {
-    font-size: 2.5rem;
-    font-weight: 800;
-  }
-
-  header p {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
-  }
-
-  nav {
-    background: white;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    transition: background 0.3s;
-  }
-
-  [data-theme="dark"] nav {
-    background: #1e293b;
-  }
-
-  nav a {
-    margin: 0 1rem;
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
-  }
-
-  [data-theme="dark"] nav a {
-    color: var(--text);
-  }
-
-  nav a:hover {
-    color: var(--secondary);
-  }
-
-  section {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    animation: fadeIn 1s ease-in;
-  }
-
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: var(--primary);
-  }
-
-  .card {
-    background: white;
-    border-radius: 1rem;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, background 0.3s, color 0.3s;
-  }
-
-  .card:hover {
-    transform: scale(1.02);
-  }
-
-  [data-theme="dark"] .card {
-    background: #1e293b;
-    color: var(--text);
-    box-shadow: 0 10px 15px rgba(255, 255, 255, 0.05);
-  }
-
-  ul {
-    list-style: disc;
-    padding-left: 1.5rem;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-
-  input, textarea {
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border: 1px solid #cbd5e1;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    background-color: white;
-    color: var(--text);
-    transition: background 0.3s, color 0.3s;
-  }
-
-  [data-theme="dark"] input,
-  [data-theme="dark"] textarea {
-    background-color: #0f172a;
-    color: var(--text);
-    border: 1px solid #334155;
-  }
-
-  button {
-    background: var(--primary);
-    color: white;
-    padding: 1rem;
-    border: none;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-
-  button:hover {
-    background: #1d4ed8;
-  }
-
-  .call-btn {
-    margin-top: 1rem;
-    display: inline-block;
-    background: #22c55e;
-    color: white;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-  }
-
-  footer {
-    background: var(--secondary);
-    color: white;
-    text-align: center;
-    padding: 2rem 1rem;
-    margin-top: 2rem;
-    font-size: 0.95rem;
-    transition: background 0.3s;
-  }
-
-  footer a {
-    color: #cbd5e1;
-    text-decoration: underline;
-  }
-
-  [data-theme="dark"] footer {
-    background: #1e293b;
-    color: #cbd5e1;
-  }
-
-  [data-theme="dark"] footer a {
-    color: #93c5fd;
-  }
-
-  .theme-toggle {
-    display: inline-block;
-    margin-left: 1rem;
-    background: transparent;
-    color: var(--primary);
-    border: 2px solid var(--primary);
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-
-  [data-theme="dark"] .theme-toggle {
-    color: var(--text);
-    border-color: var(--text);
-  }
-
-  @keyframes fadeInDown {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    } to {
-      opacity: 1;
-      transform: translateY(0);
+  <style>
+    :root {
+      --primary: #2563eb;
+      --secondary: #1e293b;
+      --bg: #f1f5f9;
+      --text: #0f172a;
     }
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    } to {
-      opacity: 1;
+    [data-theme="dark"] {
+      --primary: #3b82f6;
+      --secondary: #cbd5e1;
+      --bg: #0f172a;
+      --text: #f1f5f9;
     }
-  }
-</style>
-
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html {
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      animation: fadeInDown 1s ease-in-out;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    nav {
+      background: white;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      transition: background 0.3s;
+    }
+    [data-theme="dark"] nav {
+      background: #1e293b;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    [data-theme="dark"] nav a {
+      color: var(--text);
+    }
+    nav a:hover {
+      color: var(--secondary);
+    }
+    section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      animation: fadeIn 1s ease-in;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    .card {
+      background: white;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, background 0.3s, color 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    [data-theme="dark"] .card {
+      background: #1e293b;
+      color: var(--text);
+      box-shadow: 0 10px 15px rgba(255, 255, 255, 0.05);
+    }
+    ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    input, textarea {
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      background-color: white;
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
+    [data-theme="dark"] input,
+    [data-theme="dark"] textarea {
+      background-color: #0f172a;
+      color: var(--text);
+      border: 1px solid #334155;
+    }
+    button {
+      background: var(--primary);
+      color: white;
+      padding: 1rem;
+      border: none;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #1d4ed8;
+    }
+    .call-btn {
+      margin-top: 1rem;
+      display: inline-block;
+      background: #22c55e;
+      color: white;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+    }
+    footer {
+      background: var(--secondary);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 2rem;
+      font-size: 0.95rem;
+      transition: background 0.3s;
+    }
+    footer a {
+      color: #cbd5e1;
+      text-decoration: underline;
+    }
+    [data-theme="dark"] footer {
+      background: #1e293b;
+      color: #cbd5e1;
+    }
+    [data-theme="dark"] footer a {
+      color: #93c5fd;
+    }
+    .theme-toggle {
+      display: inline-block;
+      margin-left: 1rem;
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    [data-theme="dark"] .theme-toggle {
+      color: var(--text);
+      border-color: var(--text);
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
 </head>
 <body>
 
@@ -249,9 +208,8 @@
   <a href="#oferta">Oferta</a>
   <a href="#cennik">Cennik</a>
   <a href="#kontakt">Kontakt</a>
-  <a href="#onas">O nas</a>
+  <a href="#onas">O mnie</a>
   <button class="theme-toggle" onclick="toggleTheme()">🌙/☀️</button>
-
 </nav>
 
 <section id="oferta">
@@ -306,15 +264,20 @@
 </section>
 
 <section id="onas">
-  <h2>O nas</h2>
+  <h2>O mnie</h2>
   <div class="card">
     <p>
-      Jesteśmy lokalnym serwisem komputerowym działającym na terenie Krynka i okolic. Oferujemy szybkie, uczciwe i niedrogie naprawy komputerów stacjonarnych i laptopów.
+      Cześć! Mam na imię Ignacy i prowadzę lokalny serwis komputerowy w miejscowośći Krynka. Od kilku lat pomagam mieszkańcom naprawiać laptopy i komputery — od wymiany dysków HDD po usuwanie usterek powstałych przez nieprawidłowe użytkowanie sprzętu.
     </p>
-    <p>Z komputerami mam do czynienia na co dzień  od sprzętu, przez systemy operacyjne, aż po oprogramowanie.</p>
+    <p>
+      Obecnie uczę się w 4 klasie technikum na kierunku technik informatyk, a naprawianie komputerów to moja pasja i codzienność. Działam stacjonarnie, a czas realizacji usługi to minimum 2 dni robocze — zawsze informuję klientów, gdy coś się przedłuża.
+    </p>
+    <p>
+      Stawiam na uczciwość, przejrzyste warunki i lokalne wsparcie. Nie wciskam klientom niczego na siłę — po prostu robię swoją robotę, jak najlepiej potrafię.
+    </p>
     <p style="font-size: 0.9rem; margin-top: 1rem; color: gray;">
       <strong>Informacja prawna:</strong><br>
-      Nazwa „Serwis Krynka” odnosi się wyłącznie do lokalizacji naszej działalności. Nie jesteśmy powiązani z żadnym innym podmiotem używającym tej nazwy, np. producentem wód mineralnych.
+      Nazwa „Serwis Krynka” odnosi się wyłącznie do miejsca prowadzenia działalności. Nie mam powiązań z innymi podmiotami używającymi tej nazwy, np. producentem wód mineralnych.
     </p>
   </div>
 </section>
@@ -327,11 +290,9 @@
 <script>
   const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
   const currentTheme = localStorage.getItem("theme");
-
   if (currentTheme === "dark" || (!currentTheme && prefersDarkScheme.matches)) {
     document.documentElement.setAttribute("data-theme", "dark");
   }
-
   function toggleTheme() {
     const theme = document.documentElement.getAttribute("data-theme");
     if (theme === "dark") {
@@ -344,9 +305,6 @@
   }
 </script>
 
-<!-- GoatCounter - anonimowe statystyki zgodne z RODO.
-     Nie gromadzi danych osobowych, nie ustawia cookies. -->
-<script data-goatcounter="https://testtest.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://testtest.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
